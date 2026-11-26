@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/sitemap.xml

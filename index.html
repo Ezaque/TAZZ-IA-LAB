@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#060807" />
+    <meta
+      name="description"
+      content="TAZZ LAB: aprenda HTML, CSS e JavaScript vendo, clicando e construindo."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="TAZZ LAB" />
+    <meta property="og:title" content="TAZZ LAB — Código que você vê" />
+    <meta property="og:description" content="Aprenda HTML, CSS e JavaScript vendo, clicando e construindo interfaces reais." />
+    <meta property="og:url" content="https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/" />
+    <meta property="og:image" content="https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/assets/tazz-guardian.webp" />
+    <meta property="og:image:alt" content="Guardião digital da TAZZ IA no laboratório educacional TAZZ LAB" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TAZZ LAB — Código que você vê" />
+    <meta name="twitter:description" content="Aprenda HTML, CSS e JavaScript vendo, clicando e construindo interfaces reais." />
+    <meta name="twitter:image" content="https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/assets/tazz-guardian.webp" />
+    <title>TAZZ LAB — Código que você vê</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23060807'/%3E%3Cpath d='M14 24h14V10h8v14h14v8H36v22h-8V32H14z' fill='%23b9ff46'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/#website",
+            "url": "https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/",
+            "name": "TAZZ LAB — Código que você vê",
+            "description": "Laboratório educacional interativo para aprender HTML, CSS e JavaScript.",
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": ["CreativeWork", "LearningResource"],
+            "@id": "https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/#learning-resource",
+            "name": "TAZZ LAB",
+            "url": "https://tazz-lab-codigo-visual.ezequielmenezes00.chatgpt.site/",
+            "inLanguage": "pt-BR",
+            "isAccessibleForFree": true,
+            "educationalLevel": ["Iniciante", "Intermediário"],
+            "learningResourceType": "Laboratório interativo",
+            "teaches": ["HTML", "CSS", "JavaScript", "Flexbox", "CSS Grid"]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header" id="inicio">
+      <div class="scroll-progress" aria-hidden="true"><i></i></div>
+      <a class="brand" href="#inicio" aria-label="TAZZ LAB — início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>TAZZ <strong>LAB</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#explorar">Explorar</a>
+        <a href="#construtor">Construir</a>
+        <a href="#playground">Playground</a>
+        <a href="#editor">Editor</a>
+        <a href="#analisador">Analisador</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile">
+        <span class="sr-only">Abrir menu</span>
+        <span></span><span></span>
+      </button>
+      <nav class="mobile-nav" id="menu-mobile" aria-label="Navegação móvel" hidden>
+        <a href="#explorar">Explorar</a>
+        <a href="#construtor">Construir</a>
+        <a href="#playground">Playground</a>
+        <a href="#editor">Editor</a>
+        <a href="#analisador">Analisador</a>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Laboratório educacional TAZZ IA</p>
+          <h1 id="hero-title">Não decore código.<br /><em>Veja o código acontecer.</em></h1>
+          <p class="hero-lead">
+            Uma coleção viva de HTML, CSS e JavaScript para explorar, combinar e testar —
+            do primeiro elemento à primeira página completa.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#explorar">Começar a explorar <span>↘</span></a>
+            <a class="button button-ghost" href="#construtor">Montar uma página</a>
+          </div>
+          <div class="hero-meta" aria-label="Recursos do site">
+            <span><b id="lesson-count">30</b> cartões vivos</span>
+            <span><b>3</b> laboratórios</span>
+            <span><b>0</b> instalação</span>
+          </div>
+        </div>
+
+        <div class="guardian-background" aria-hidden="true">
+          <img class="guardian-ambience" src="./assets/guardiao/repouso.webp" alt="" width="576" height="720" />
+          <canvas class="guardian-ambience" width="32" height="40" hidden></canvas>
+          <img class="guardian-portrait" src="./assets/guardiao/repouso.webp" width="576" height="720" alt="" fetchpriority="high" />
+          <canvas class="guardian-portrait" width="576" height="720" hidden></canvas>
+        </div>
+        <button type="button" class="guardian-control" aria-label="Pausar animação do Guardião" title="Pausar animação do Guardião" hidden>
+          <span aria-hidden="true">Ⅱ</span>
+        </button>
+      </section>
+
+      <section class="marquee" aria-label="Tecnologias disponíveis">
+        <div>
+          <span>HTML É ESTRUTURA</span><i>✦</i><span>CSS É EXPRESSÃO</span><i>✦</i><span>JS É MOVIMENTO</span><i>✦</i>
+          <span aria-hidden="true">HTML É ESTRUTURA</span><i aria-hidden="true">✦</i><span aria-hidden="true">CSS É EXPRESSÃO</span><i aria-hidden="true">✦</i><span aria-hidden="true">JS É MOVIMENTO</span><i aria-hidden="true">✦</i>
+        </div>
+      </section>
+
+      <section class="explore-section section-shell" id="explorar" aria-labelledby="explore-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index">01 / DICIONÁRIO VISUAL</p>
+            <h2 id="explore-title">Escolha. Observe.<br /><em>Entenda.</em></h2>
+          </div>
+          <p>Cada cartão une a explicação ao resultado real. Clique em “usar no construtor” e transforme conceito em página.</p>
+        </div>
+
+        <div class="finder reveal" role="search">
+          <label class="search-box" for="search-input">
+            <span class="sr-only">Buscar elemento ou propriedade</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="search-input" type="search" placeholder="Buscar por tag, propriedade ou efeito…" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <div class="filter-group" aria-label="Filtrar por tecnologia">
+            <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter-chip html" type="button" data-filter="html" aria-pressed="false">HTML</button>
+            <button class="filter-chip css" type="button" data-filter="css" aria-pressed="false">CSS</button>
+            <button class="filter-chip js" type="button" data-filter="js" aria-pressed="false">JavaScript</button>
+          </div>
+        </div>
+
+        <div class="results-line">
+          <span id="results-count" aria-live="polite">30 itens encontrados</span>
+          <button class="text-button" id="clear-filters" type="button">Limpar filtros</button>
+        </div>
+        <div class="lesson-grid" id="lesson-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span>⌕</span>
+          <h3>Nenhum cartão por aqui.</h3>
+          <p>Tente outra palavra ou limpe os filtros.</p>
+        </div>
+      </section>
+
+      <section class="builder-section" id="construtor" aria-labelledby="builder-title">
+        <div class="section-shell">
+          <div class="section-heading light reveal">
+            <div>
+              <p class="section-index">02 / CONSTRUTOR VISUAL</p>
+              <h2 id="builder-title">Sua primeira página,<br /><em>peça por peça.</em></h2>
+            </div>
+            <p>Adicione cartões, reorganize a ordem e veja HTML, CSS e JavaScript nascerem juntos — sem esconder o que acontece.</p>
+          </div>
+
+          <div class="builder-workspace reveal">
+            <aside class="builder-stack" aria-label="Blocos da página">
+              <div class="panel-heading">
+                <div><span>01</span><h3>Blocos escolhidos</h3></div>
+                <button class="icon-button" id="clear-builder" type="button" title="Limpar construtor" aria-label="Limpar construtor">×</button>
+              </div>
+              <p id="builder-save-warning" role="status" hidden>Armazenamento indisponível. Exporte a página para guardar seu trabalho.</p>
+              <div class="stack-list" id="builder-list"></div>
+              <button class="add-more" type="button" data-scroll-to="explorar">＋ Adicionar outro bloco</button>
+            </aside>
+
+            <div class="builder-preview-panel">
+              <div class="panel-heading preview-heading">
+                <div><span>02</span><h3>Preview</h3></div>
+                <div class="viewport-switcher" aria-label="Tamanho do preview">
+                  <button class="is-active" type="button" data-viewport="100%" aria-label="Desktop" aria-pressed="true">▭</button>
+                  <button type="button" data-viewport="390px" aria-label="Celular" aria-pressed="false">▯</button>
+                </div>
+              </div>
+              <div class="browser-frame">
+                <div class="browser-bar"><i></i><i></i><i></i><span>minha-pagina.tazz</span></div>
+                <iframe id="builder-preview" title="Preview da página construída" sandbox="allow-scripts"></iframe>
+              </div>
+            </div>
+
+            <div class="builder-code-panel">
+              <div class="panel-heading code-heading">
+                <div class="code-tabs" role="tablist" aria-label="Código gerado">
+                  <button class="is-active" id="tab-html" role="tab" aria-selected="true" aria-controls="generated-code" tabindex="0" data-code-tab="html">HTML</button>
+                  <button id="tab-css" role="tab" aria-selected="false" aria-controls="generated-code" tabindex="-1" data-code-tab="css">CSS</button>
+                  <button id="tab-js" role="tab" aria-selected="false" aria-controls="generated-code" tabindex="-1" data-code-tab="js">JS</button>
+                </div>
+                <button class="copy-button" id="copy-generated" type="button">Copiar</button>
+              </div>
+              <pre class="generated-code" id="generated-code" role="tabpanel" aria-labelledby="tab-html" tabindex="0"><code></code></pre>
+              <button class="button button-primary export-button" id="export-page" type="button">Exportar página .html <span>↓</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="playground-section section-shell" id="playground" aria-labelledby="playground-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index">03 / PLAYGROUND DE LAYOUT</p>
+            <h2 id="playground-title">Mova as regras.<br /><em>Sinta o layout.</em></h2>
+          </div>
+          <p>Flexbox e Grid deixam de ser teoria quando cada mudança responde diante dos seus olhos.</p>
+        </div>
+
+        <div class="playground-tabs reveal" role="tablist" aria-label="Escolha do playground">
+          <button class="is-active" id="playground-tab-flex" type="button" role="tab" aria-selected="true" aria-controls="flex-playground" tabindex="0" data-playground-tab="flex">Flexbox</button>
+          <button id="playground-tab-grid" type="button" role="tab" aria-selected="false" aria-controls="grid-playground" tabindex="-1" data-playground-tab="grid">CSS Grid</button>
+        </div>
+
+        <div class="playground-card reveal" id="flex-playground" role="tabpanel" aria-labelledby="playground-tab-flex">
+          <div class="control-rail">
+            <div class="control-heading"><span>FLEX</span><h3>Controle as regras</h3></div>
+            <fieldset class="choice-control">
+              <legend>flex-direction</legend>
+              <div>
+                <button class="is-active" type="button" aria-pressed="true" data-flex-key="direction" data-flex-value="row">row</button>
+                <button type="button" aria-pressed="false" data-flex-key="direction" data-flex-value="column">column</button>
+              </div>
+            </fieldset>
+            <fieldset class="choice-control">
+              <legend>justify-content</legend>
+              <div>
+                <button type="button" aria-pressed="false" data-flex-key="justify" data-flex-value="flex-start">start</button>
+                <button class="is-active" type="button" aria-pressed="true" data-flex-key="justify" data-flex-value="center">center</button>
+                <button type="button" aria-pressed="false" data-flex-key="justify" data-flex-value="space-between">between</button>
+              </div>
+            </fieldset>
+            <fieldset class="choice-control">
+              <legend>align-items</legend>
+              <div>
+                <button type="button" aria-pressed="false" data-flex-key="align" data-flex-value="flex-start">start</button>
+                <button class="is-active" type="button" aria-pressed="true" data-flex-key="align" data-flex-value="center">center</button>
+                <button type="button" aria-pressed="false" data-flex-key="align" data-flex-value="stretch">stretch</button>
+              </div>
+            </fieldset>
+            <label class="range-control" for="flex-gap"><span>gap</span><output id="flex-gap-value">16px</output>
+              <input id="flex-gap" type="range" min="0" max="48" value="16" />
+            </label>
+            <div class="live-rule"><span>.container {</span><code id="flex-code"></code><span>}</span></div>
+          </div>
+          <div class="layout-stage-wrap">
+            <div class="stage-label"><span>RESULTADO</span><span>arraste o espaço, não os blocos</span></div>
+            <div class="flex-stage" id="flex-stage">
+              <div><span>01</span></div><div><span>02</span></div><div><span>03</span></div><div><span>04</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playground-card reveal" id="grid-playground" role="tabpanel" aria-labelledby="playground-tab-grid" hidden>
+          <div class="control-rail">
+            <div class="control-heading grid-accent"><span>GRID</span><h3>Desenhe a grade</h3></div>
+            <fieldset class="choice-control">
+              <legend>grid-template-columns</legend>
+              <div>
+                <button type="button" aria-pressed="false" data-grid-columns="2">2 col</button>
+                <button class="is-active" type="button" aria-pressed="true" data-grid-columns="3">3 col</button>
+                <button type="button" aria-pressed="false" data-grid-columns="4">4 col</button>
+              </div>
+            </fieldset>
+            <fieldset class="choice-control">
+              <legend>quantidade de itens</legend>
+              <div>
+                <button type="button" aria-pressed="false" data-grid-items="4">4</button>
+                <button class="is-active" type="button" aria-pressed="true" data-grid-items="6">6</button>
+                <button type="button" aria-pressed="false" data-grid-items="8">8</button>
+              </div>
+            </fieldset>
+            <label class="range-control" for="grid-gap"><span>gap</span><output id="grid-gap-value">16px</output>
+              <input id="grid-gap" type="range" min="0" max="40" value="16" />
+            </label>
+            <div class="live-rule"><span>.galeria {</span><code id="grid-code"></code><span>}</span></div>
+          </div>
+          <div class="layout-stage-wrap">
+            <div class="stage-label"><span>RESULTADO</span><span>cada célula encontra seu lugar</span></div>
+            <div class="grid-stage" id="grid-stage"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="editor-section" id="editor" aria-labelledby="editor-title">
+        <div class="section-shell">
+          <div class="section-heading light reveal">
+            <div>
+              <p class="section-index">04 / EDITOR LIVRE</p>
+              <h2 id="editor-title">Agora é com você.<br /><em>Quebre. Refaça. Aprenda.</em></h2>
+            </div>
+            <p>Um espaço seguro para misturar as três linguagens. O preview roda isolado e seu rascunho fica salvo neste navegador.</p>
+          </div>
+
+          <div class="example-strip reveal" aria-label="Exemplos didáticos">
+            <span>CARREGAR EXEMPLO:</span>
+            <button type="button" data-example="profile">Cartão de perfil</button>
+            <button type="button" data-example="counter">Contador interativo</button>
+            <button type="button" data-example="gallery">Galeria responsiva</button>
+          </div>
+
+          <div class="editor-workspace reveal">
+            <div class="editor-pane">
+              <div class="editor-tabs" role="tablist" aria-label="Arquivos do editor">
+                <button class="is-active html" id="editor-tab-html" type="button" role="tab" aria-selected="true" aria-controls="editor-code-panel" tabindex="0" data-editor-tab="html">● index.html</button>
+                <button class="css" id="editor-tab-css" type="button" role="tab" aria-selected="false" aria-controls="editor-code-panel" tabindex="-1" data-editor-tab="css">● style.css</button>
+                <button class="js" id="editor-tab-js" type="button" role="tab" aria-selected="false" aria-controls="editor-code-panel" tabindex="-1" data-editor-tab="js">● script.js</button>
+              </div>
+              <div class="editor-area-wrap" id="editor-code-panel" role="tabpanel" aria-labelledby="editor-tab-html">
+                <div class="line-numbers" id="line-numbers" aria-hidden="true"></div>
+                <textarea id="code-editor" aria-label="Editor de código" aria-describedby="editor-help" spellcheck="false"></textarea>
+              </div>
+              <div class="editor-footer">
+                <span id="save-status" role="status">Rascunho local</span>
+                <span class="editor-help" id="editor-help">Tab indenta. Esc + Tab sai do editor.</span>
+                <button id="reset-editor" type="button">Restaurar exemplo</button>
+              </div>
+            </div>
+            <div class="editor-preview-pane">
+              <div class="preview-toolbar">
+                <span><i></i> PREVIEW SEGURO</span>
+                <button id="run-editor" type="button">Executar <b>▶</b></button>
+              </div>
+              <iframe id="editor-preview" title="Preview do editor" sandbox="allow-scripts"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="analyzer section-shell" id="analisador" aria-labelledby="analyzer-title">
+        <div class="section-heading">
+          <div><p class="section-index">05 / REVISÃO DO PROJETO</p><h2 id="analyzer-title">Analisador de <em>código.</em></h2></div>
+          <p>Selecione os arquivos do projeto para localizar erros e entender como corrigi-los. A leitura acontece no seu navegador.</p>
+        </div>
+        <form class="review-form" id="review-form">
+          <label for="review-files">Arquivos do projeto</label>
+          <p id="review-help">HTML, CSS e JavaScript · até 2 MB por arquivo. Você pode selecionar vários de uma vez.</p>
+          <input id="review-files" type="file" accept=".html,.htm,.css,.js,.mjs" multiple required aria-describedby="review-help" />
+          <button class="button button-primary" type="submit">Analisar arquivos</button>
+        </form>
+        <p id="review-status" role="status"></p>
+        <div id="review-results"></div>
+      </section>
+
+      <section class="closing-section section-shell">
+        <p class="section-index">PRONTO PARA O PRÓXIMO NÍVEL?</p>
+        <h2>O código deixa de assustar<br />quando <em>você enxerga a lógica.</em></h2>
+        <a class="button button-primary" href="#explorar">Voltar aos cartões <span>↑</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>TAZZ <strong>LAB</strong></span></div>
+      <p>Uma experiência educacional <b>TAZZ IA</b> — tecnologia que aproxima, não que complica.</p>
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./guardian.js" defer></script>
+    <script src="./analyzer.js" defer></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

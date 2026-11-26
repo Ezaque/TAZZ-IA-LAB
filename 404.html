@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#060807" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Página não encontrada — TAZZ LAB</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23060807'/%3E%3Cpath d='M14 24h14V10h8v14h14v8H36v22h-8V32H14z' fill='%23b9ff46'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #060807;
+        --line: rgba(238, 244, 235, 0.14);
+        --green: #b9ff46;
+        --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+        --sans: "Segoe UI Variable", Inter, system-ui, -apple-system, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: #f4f7f1;
+        background: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 75% 25%, rgba(185, 255, 70, 0.13), transparent 30%),
+          linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+        background-size: auto, 64px 64px, 64px 64px;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      :focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+
+      .error-page {
+        min-height: 100svh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+
+      .error-header {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        padding-inline: max(24px, calc((100vw - 1220px) / 2));
+        border-bottom: 1px solid var(--line);
+        background: rgba(6, 8, 7, 0.78);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      .brand strong { color: var(--green); }
+
+      .brand-mark {
+        position: relative;
+        width: 27px;
+        height: 27px;
+        display: grid;
+        place-items: center;
+        filter: drop-shadow(0 0 8px rgba(185, 255, 70, 0.32));
+        transform: rotate(45deg);
+      }
+
+      .brand-mark::before,
+      .brand-mark::after,
+      .brand-mark i {
+        content: "";
+        position: absolute;
+        display: block;
+        border: 1.5px solid var(--green);
+      }
+
+      .brand-mark::before { width: 24px; height: 8px; }
+      .brand-mark::after { width: 8px; height: 24px; }
+      .brand-mark i:first-child { width: 4px; height: 18px; border: 0; background: var(--green); }
+      .brand-mark i:last-child { width: 18px; height: 4px; border: 0; background: var(--green); }
+
+      .error-main {
+        width: min(920px, calc(100% - 32px));
+        display: grid;
+        align-content: center;
+        gap: 28px;
+        margin-inline: auto;
+        padding-block: 80px;
+      }
+
+      .error-code {
+        margin: 0;
+        color: var(--green);
+        font: 500 11px var(--mono);
+        letter-spacing: 0.16em;
+      }
+
+      .error-main h1 {
+        max-width: 11ch;
+        margin: 0;
+        font-size: clamp(3.6rem, 10vw, 8rem);
+        line-height: 0.9;
+        letter-spacing: -0.075em;
+        text-wrap: balance;
+      }
+
+      .error-main > p {
+        max-width: 620px;
+        margin: 0;
+        color: #aeb6ae;
+        font-size: 1.08rem;
+      }
+
+      .error-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+      .button {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 0 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font: 600 12px/1 var(--mono);
+        transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      }
+
+      .button:hover { transform: translateY(-2px); }
+      .button-primary { color: #10140f; border-color: rgba(224, 255, 174, 0.62); background: var(--green); }
+      .button-primary:hover { background: #caff75; }
+      .button-ghost { color: #dae0da; border-color: rgba(255, 255, 255, 0.18); background: rgba(255, 255, 255, 0.035); }
+      .button-ghost:hover { border-color: rgba(255, 255, 255, 0.38); }
+
+      .error-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .error-grid a {
+        min-height: 110px;
+        display: grid;
+        align-content: end;
+        padding: 20px;
+        color: #dfe6de;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.025);
+        font: 500 11px var(--mono);
+        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+
+      .error-grid a:hover,
+      .error-grid a:focus-visible {
+        color: var(--ink);
+        border-color: var(--green);
+        background: var(--green);
+      }
+
+      @media (max-width: 620px) {
+        .error-main { gap: 22px; padding-block: 48px; }
+        .error-main h1 { font-size: clamp(3.2rem, 18vw, 5rem); }
+        .error-actions { align-items: stretch; flex-direction: column; }
+        .button { width: 100%; }
+        .error-grid { grid-template-columns: 1fr; margin-top: 12px; }
+        .error-grid a { min-height: 72px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+      }
+    </style>
+  </head>
+  <body class="error-page">
+    <header class="error-header">
+      <a class="brand" href="/" aria-label="TAZZ LAB — voltar ao início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>TAZZ <strong>LAB</strong></span>
+      </a>
+    </header>
+    <main class="error-main" id="conteudo">
+      <p class="error-code">ERRO 404 / ROTA NÃO ENCONTRADA</p>
+      <h1>Esse código saiu da rota.</h1>
+      <p>A página que você procurou não existe ou mudou de endereço. O laboratório continua disponível.</p>
+      <div class="error-actions">
+        <a class="button button-primary" href="/">Voltar ao início <span>↗</span></a>
+        <a class="button button-ghost" href="/#explorar">Explorar os cards</a>
+      </div>
+      <nav class="error-grid" aria-label="Atalhos do laboratório">
+        <a href="/#construtor">Construtor visual</a>
+        <a href="/#playground">Playground de layout</a>
+        <a href="/#editor">Editor livre</a>
+      </nav>
+    </main>
+  </body>
+</html>
